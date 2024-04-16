@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+body{
+    background-image: url('flower.jpg')
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    gap: 30px;
+}
+li{
+    list-style: none;
+    position: relative;
+}
+li::after{
+    content: '';
+    width: 0;
+    background: red;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    transition: 0.3s ease;
+}
+li:hover::after
+{width: 100%;
+
+}
+button{
+    border: solid 3px red;
+    border-radius: 29px;
+    color: white;
+    padding: 0;
+    background: transparent;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+
+
+   }
+span{ 
+    position: absolute;
+    background-color: green;
+    width: 0;
+    left: 0;
+    height: 200px;
+    z-index: -1;
+    transition: all 0.5 ease;
+    
+}
+button:hover span{
+width: 100%;
+}
